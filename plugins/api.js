@@ -15,7 +15,7 @@ export default function ({ $axios }, inject) {
       // NODE_ENV === "production"
 
       // ? ""
-      'http://localhost:8080'
+      'lilstar.eba-iqidzj6g.ap-northeast-2.elasticbeanstalk.com'
     )
 
     // Inject to context as $api
