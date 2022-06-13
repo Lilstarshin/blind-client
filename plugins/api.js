@@ -1,5 +1,5 @@
-require('dotenv').config()
-const { NODE_ENV } = process.env
+// require('dotenv').config()
+// const { NODE_ENV } = process.env
 export default function ({ $axios }, inject) {
   // Create a custom axios instance
   if (process.browser) {
