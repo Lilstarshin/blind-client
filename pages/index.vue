@@ -2,10 +2,10 @@
   <div class="main-container">
     <main>
       <SearchBar />
-      <BestBoardCard
+      <!-- <BestBoardCard
         v-if="mainContent[0]"
         :articleList="mainContent[0].content"
-      />
+      /> -->
       <div class="board-card-container">
         <BoardCard
           v-for="b in mainContent"
@@ -40,6 +40,7 @@ export default {
   },
   methods: {
     async getRecentBoardArticleList() {
+      console.log(this.$api)
       const data = await this.$api?.$get('/main')
 
       if (!data && data?.error) {
@@ -50,6 +51,7 @@ export default {
         (a, b) =>
           new Date(a.createdAt).getTime() > new Date(b.createdAt).getTime()
       )
+      console.log(data)
     },
   },
 }

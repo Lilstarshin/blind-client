@@ -11,12 +11,7 @@ export default function ({ $axios }, inject) {
     })
 
     // Set baseURL to something different
-    api.setBaseURL(
-      // NODE_ENV === "production"
-
-      // ? ""
-      'lilstar.eba-iqidzj6g.ap-northeast-2.elasticbeanstalk.com'
-    )
+    api.setBaseURL('https://www.lilstarshin.com')
 
     // Inject to context as $api
     inject('api', api)
